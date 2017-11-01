@@ -1,0 +1,6 @@
+node_modules
+test/integration/config.ts
+lib/
+coverage/
+.nyc_output/
+demo

@@ -1,0 +1,11 @@
+/src
+/reports
+/coverage
+/.nyc_output
+/.github
+test
+/build
+/typings
+.vscode
+*.js.map
+!/lib

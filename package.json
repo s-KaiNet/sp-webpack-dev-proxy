@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "name": "sp-webpack-dev-proxy",
+  "author": "Sergei Sergeev <sergeev.srg@gmail.com>",
+  "description": "SharePoint proxy for webpack dev server",
+  "main": "./lib/src/index.js",
+  "typings": "./lib/src/index",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "sharepoint",
+    "webpack",
+    "nodejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/s-KaiNet/sp-webpack-dev-proxy/issues"
+  },
+  "homepage": "https://github.com/s-KaiNet/sp-webpack-dev-proxy",
+  "scripts": {
+    "build": "npm run tslint && tsc -p .",
+    "dev": "tsc -p . --watch",
+    "tslint": "tslint --project tsconfig.json --type-check",
+    "prepublish": "rimraf -- lib && npm run build",
+    "prepublishOnly": "rimraf -- lib && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/s-KaiNet/sp-webpack-dev-proxy.git"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.39",
+    "@types/http-proxy-middleware": "^0.17.1",
+    "@types/webpack": "^3.0.14",
+    "tslint-config-standard": "^7.0.0"
+  },
+  "dependencies": {
+    "node-sp-auth": "^2.2.9",
+    "node-sp-auth-config": "^2.1.1"
+  }
+}
